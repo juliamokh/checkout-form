@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Task 11 Kottans - Checkout Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="fonts/fonts.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.4/css/all.css">  
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="back"><a href=""><i class="fas fa-long-arrow-alt-left"></i> Go back</a></div>
+        <div class="logo"><img src="img/logo.png" alt="" width="100" height="100"></div>
+        <div class="sign-in"><a href=""><i class="fas fa-user"></i> Sign in</a></div>
+    </header>
+    <main>
+        <form action="" method="post">
+            <section class="order-header">
+                <div class="order-summary">
+                    <table>
+                        <caption>Your order</caption>
+                        <tr>
+                            <th>Items</th>
+                            <th>Details</th>
+                            <th>Price</th>
+                            <th>Delivery</th>
+                        </tr>
+                        <tr>
+                            <td>2 documents</td>
+                            <td>2 languages</td>
+                            <td value="USD:696.00">$ 696.06</td>
+                            <td>48 hours*</td>
+                        </tr>
+                    </table>
+                    <button type="submit">Place order</button>
+                    <button>Print a quote</button>
+                </div>
+                <div class="help">
+                    <h2>Help center</h2>
+                    <p>If you need assistance while placing your
+                        order, contact one of our beloved Project
+                        Manager by phone or email</p>
+                    <address>
+                        <a href="tel:+971(0)555555">+971(0)555 555</a>
+                        <a href="mailto:help@qtest.com">help@qtest.com</a>
+                    </address>
+                </div>
+            </section>
+            <section class="order-main">
+                <fieldset class="document-type-selection">
+                    <legend>Select what you want to translate</legend>
+                    <ul>
+                        <li>
+                            <label for="website">Website</label>
+                            <input type="radio" id="website" name="document-type" value="website">
+                        </li>
+                        <li>
+                            <label for="document">Documents</label>
+                            <input type="radio" checked id="document" name="document-type" value="document">
+                        </li>
+                        <li>
+                            <label for="social-account">Social Account</label>
+                            <input type="radio" id="social-account" name="document-type" value="social-account">
+                        </li>
+                    </ul>
+                </fieldset>
+                <fieldset class="file-upload">
+                    <legend>Upload your documents <span>(Doc, Docx, Text, PFD, Markdown)</span></legend>
+                    <label for="file">Upload a new file</label>
+                    <input type="file" name="file" id="file" accept=".doc, .docx, .txt, .pdf, .md" multiple>
+                    <table>
+                        <tr>
+                            <th>File name</th>
+                            <th>File size</th>
+                            <th>Number of words</th>
+                            <th>Remove</th>
+                        </tr>
+                        <tr>
+                            <td>busines_operations.docx</td>
+                            <td>78kb</td>
+                            <td>842</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>busines_financial.docx</td>
+                            <td>26kb</td>
+                            <td>2,326</td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </fieldset>
+                <fieldset class="language-selection">
+                    <legend>Choose your languages pairings</legend>
+                    <div class="src-language">
+                        <label for="src-language">From</label>
+                        <select id="src-language" name="src-language">
+                            <option>Arabic</option>
+                            <option>Chinese</option>
+                            <option selected>English</option>
+                            <option>French</option>
+                            <option>German</option>
+                            <option>Kurdish</option>
+                            <option>Russian</option>
+                            <option>Ukrainian</option>
+                        </select>
+                    </div>
+                    <div class="res-language">
+                        <label for="res-language-1">To</label>
+                        <select id="res-language-1" name="res-language">
+                            <option selected>Arabic</option>
+                            <option>Chinese</option>
+                            <option>English</option>
+                            <option>French</option>
+                            <option>German</option>
+                            <option>Kurdish</option>
+                            <option>Russian</option>
+                            <option>Ukrainian</option>
+                        </select>
+                        <select id="res-language-2" name="res-language">
+                            <option>Arabic</option>
+                            <option>Chinese</option>
+                            <option>English</option>
+                            <option>French</option>
+                            <option>German</option>
+                            <option selected>Kurdish</option>
+                            <option>Russian</option>
+                            <option>Ukrainian</option>
+                        </select>
+                        <button>Add</button>
+                    </div>
+                </fieldset>
+                <fieldset class="tone-selection">
+                    <legend>Select your desired tone</legend>
+                    <ul>
+                        <li>
+                            <label for="tone-1">Friendly / Casual</label>
+                            <input type="radio" id="tone-1" name="tone" value="casual">
+                        </li>
+                        <li>
+                            <label for="tone-2">Corporate / Pro</label>
+                            <input type="radio" checked id="tone-2" name="tone" value="pro">
+                        </li>
+                        <li>
+                            <label for="tone-3">Media / Formal</label>
+                            <input type="radio" id="tone-3" name="tone" value="formal">
+                        </li>
+                    </ul>
+                </fieldset>
+                <fieldset class="time-selection">
+                    <legend>Tell us how urgent this job is</legend>
+                    <input type="range" min="0" max="2" step="1" value="1">
+                    <ul class="range-labels">
+                        <li>I got time</li>
+                        <li class="active selected">Average</li>
+                        <li>Yesterday</li>
+                    </ul>
+                </fieldset>
+                <fieldset class="payment-method-selection">
+                    <legend>Sign up and choose a payment method</legend>
+                    <p>Already have an account with us? <a href="">Sign in</a>.</p>
+                    <label for="name">Full name</label>
+                    <input type="text" id="name" name="name" value="Mathieu Mayer">
+                    <label for="email">Email adress</label>
+                    <input type="email" id="email" name="email" value="mathieu.mm@me.com">
+                    <label for="pwd">Choose a password</label>
+                    <input type="password" id="pwd" name="pwd" value="123456789">
+                    <ul>
+                        <li>
+                            <label for="payment-method-1">Visa / MasterCard</label>
+                            <input type="radio" checked id="payment-method-1" name="payment-method" value="credit-card">
+                        </li>
+                        <li>
+                            <label for="payment-method-2">PayPal</label>
+                            <input type="radio" id="payment-method-2" name="payment-method" value="paypal">
+                        </li>
+                        <li>
+                            <label for="payment-method-3">amazon.com</label>
+                            <input type="radio" id="payment-method-3" name="payment-method" value="amazon">
+                        </li>
+                    </ul>
+                    <label for="card-number">Card number</label>
+                    <input type="password" id="card-number" name="card-number">
+                    <label for="card-expiry-date">Expiry date</label>
+                    <input type="date" id="card-expiry-date" name="card-expiry-date">
+                    <label for="verification">Code</label>
+                    <input type="password" id="verification" name="verification-code">
+                </fieldset>
+            </section>
+            <section class="order-footer">
+                <label for="agreement-terms">I agree to the <a href="">Terms & Conditions</a></label>
+                <input type="checkbox" checked id="agreement-terms" name="agreement-terms-check" value="true">
+                <button type="submit">Place order</button>
+                <button>Print a quote</button>
+            </section>
+        </form>
+    </main>
+    <footer>
+        <div class="about">
+            <h2>What we do</h2>
+            <p><i>We provide full range of language
+                services including content development,
+                document, website and social media
+                accounts translations.</i></p>
+        </div>
+        <div class="main-office-address">
+            <h2>Our main office</h2>
+            <address>
+                <p>Dubai, UAE<br>
+                P.O.Box: 502735<br>
+                Phone: <a href="tel:+971(0)44278128">+971(0)44278128</a>
+                </p>
+            </address>
+        </div>
+        <div class="social">
+            <h2>Connect with us</h2>
+            <ul>
+                <li>Facebook</li>
+                <li>Twitter</li>
+                <li>Linkedin</li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>

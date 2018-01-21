@@ -1,0 +1,60 @@
+body {
+    background-color: #eceef4;
+    font-family: 'Proxima Nova', Georgia, sans-serif;
+    color: #6e768f;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+}
+
+a {
+    text-decoration: none;
+    color: #6e768f;
+}
+
+header {
+    margin: 0 150px;
+    padding: 62px 0;
+    display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.back, .sign-in {
+    border: 1px solid #c9d0e1;
+    border-radius: 3px;
+    padding: 18px 40px;
+    font-size: 12px;
+	font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.fa-long-arrow-alt-left, .fa-user {
+	margin: 0 10px 0 0;
+}
+
+main {
+    background-color: #ffffff;
+    margin: 0 150px;
+    border: 1px solid #c9d0e1;
+    border-radius: 3px;
+}
+
+.order-header {
+    display: flex;
+    flex-direction: row;
+}
+
+.order-summary {
+    flex-grow: 2;
+}
+
+.help {
+    flex-grow: 1;
+}
+
+footer {
+    margin: 0 150px;
+}
