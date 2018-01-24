@@ -1,24 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    background-color: #eceef4;
-    font-family: 'Proxima Nova', Georgia, sans-serif;
-    color: #6e768f;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: stretch;
+    align-items: center;
+    color: #6e768f;
+    background-color: #eceef4;
+    font-family: "Proxima Nova", "Georgia", sans-serif;
+    font-size: 14px;
 }
+
+.page-header {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3vh 0;
+
+    border: 1px dashed black;
+}
+
+/*
 
 a {
     text-decoration: none;
     color: #6e768f;
-}
-
-header {
-    margin: 0 150px;
-    padding: 62px 0;
-    display: flex;
-	justify-content: space-between;
-	align-items: center;
 }
 
 .back, .sign-in {
@@ -58,3 +69,4 @@ main {
 footer {
     margin: 0 150px;
 }
+*/

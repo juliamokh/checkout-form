@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Task 11 Kottans - Checkout Form</title>
- <!--   <link rel="stylesheet" href="css/reset.css"> -->
- <!--   <link rel="stylesheet" href="css/style.css"> -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="fonts/fonts.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.4/css/all.css">  
 </head>
@@ -29,7 +29,7 @@
             <section class="order-header">
                 <div class="order-summary">
                     <table class="order-summary-table">
-                        <caption><h3>Your order</h3></caption>
+                        <caption><h3><i class="fas fa-clipboard"></i>Your order</h3></caption>
                         <tr>
                             <th>Items</th>
                             <th>Details</th>
@@ -47,7 +47,7 @@
                     <button type="button">Print a quote</button>
                 </div>
                 <div class="help">
-                    <h3>Help center</h3>
+                    <h3><i class="far fa-life-ring"></i>Help center</h3>
                     <p>If you need assistance while placing your
                         order, contact one of our beloved Project
                         Manager by phone or email</p>
@@ -64,22 +64,22 @@
                     <label class="document-type-radio">
                         <input type="radio" name="document-type" value="website" required>
                         <span class="select-wrapper">
-                            <img src="img/website.png" alt="">
                             <span>Website</span>
+                            <img src="img/website.png" alt="">
                         </span>
                     </label>
                     <label class="document-type-radio">
                         <input type="radio" name="document-type" value="document" required checked>
                         <span class="select-wrapper">
-                            <img src="img/document.png" alt="">
                             <span>Documents</span>
+                            <img src="img/document.png" alt="">
                         </span>
                     </label>
                     <label class="document-type-radio">
                         <input type="radio" name="document-type" value="social" required>
                         <span class="select-wrapper">
-                            <img src="img/social.png" alt="">
                             <span>Social Account</span>
+                            <img src="img/social.png" alt="">
                         </span>
                     </label>
                 </fieldset>
@@ -89,7 +89,7 @@
                     <label class="file-upload-btn">
                         <input type="file" name="file" accept=".doc, .docx, .txt, .pdf, .md" multiple required hidden>
                         <span class="select-wrapper">
-                            <span>Upload a new file</span>
+                            <span><i class="fas fa-cloud-upload-alt"></i>Upload a new file</span>
                         </span>
                     </label>
                     <table class="file-upload-table">
@@ -100,16 +100,16 @@
                             <th>Remove</th>
                         </tr>
                         <tr>
-                            <td>busines_operations.docx</td>
+                            <td><i class="fas fa-file-alt"></i>busines_operations.docx</td>
                             <td>78kb</td>
                             <td>842</td>
-                            <td></td>
+                            <td><i class="fas fa-trash"></i></td>
                         </tr>
                         <tr>
-                            <td>busines_financial.docx</td>
+                            <td><i class="fas fa-file-alt"></i>busines_financial.docx</td>
                             <td>26kb</td>
                             <td>2,326</td>
-                            <td></td>
+                            <td><i class="fas fa-trash"></i></td>
                         </tr>
                     </table>
                 </fieldset>
@@ -139,7 +139,8 @@
                             <option value="kurdish" selected>Kurdish</option>
                             <option value="ukrainian">Ukrainian</option>
                         </select>
-                        <button type="button">Add</button>
+                        <i class="fas fa-trash"></i>
+                        <button type="button"><i class="fas fa-plus"></i>Add</button>
                     </div>
                 </fieldset>
                 
@@ -148,19 +149,19 @@
                     <label class="tone-radio">
                         <input type="radio" name="tone" value="casual" required>
                         <span class="select-wrapper">
-                            <span>Friendly / Casual</span>
+                            <span><i class="fas fa-comments"></i>Friendly / Casual</span>
                         </span>
                     </label>
                     <label class="tone-radio">
                         <input type="radio" name="tone" value="pro" required checked>
                         <span class="select-wrapper">
-                            <span>Corporate / Pro</span>
+                            <span><i class="fas fa-briefcase"></i>Corporate / Pro</span>
                         </span>
                     </label>
                     <label class="tone-radio">
                         <input type="radio" name="tone" value="formal" required>
                         <span class="select-wrapper">
-                            <span>Media / Formal</span>
+                            <span><i class="fas fa-bullhorn"></i>Media / Formal</span>
                         </span>
                     </label>
                 </fieldset>
@@ -174,7 +175,7 @@
                         <li>Yesterday</li>
                     </ul>
                     <div class="timeline-info">
-                        <h3>Timeline info</h3>
+                        <h3><i class="fas fa-info-circle"></i>Timeline info</h3>
                         <p>With an <strong>average</strong> timeline set up, our expert translator can take a
                             reasonable amount of time perfecting your translation</p>
                     </div>
@@ -230,14 +231,14 @@
    
     <footer>
         <div class="about">
-            <h3>What we do</h3>
+            <h3><i class="far fa-heart"></i>What we do</h3>
             <p><i>We provide full range of language
                 services including content development,
                 document, website and social media
                 accounts translations.</i></p>
         </div>
         <div class="main-office-address">
-            <h3>Our main office</h3>
+            <h3><i class="far fa-compass"></i>Our main office</h3>
             <address>
                 <p>Dubai, UAE<br>
                 P.O.Box: 502735<br>
@@ -246,11 +247,11 @@
             </address>
         </div>
         <div class="social">
-            <h3>Connect with us</h3>
+            <h3><i class="fas fa-share-alt"></i>Connect with us</h3>
             <ul>
-                <li>Facebook</li>
-                <li>Twitter</li>
-                <li>Linkedin</li>
+                <li><i class="fab fa-facebook-square"></i>Facebook</li>
+                <li><i class="fab fa-twitter-square"></i>Twitter</li>
+                <li><i class="fab fa-linkedin"></i>Linkedin</li>
             </ul>
         </div>
         <div class="logo">
