@@ -1,27 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Task 11 Kottans - Checkout Form</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="fonts/fonts.css">
+ <!--   <link rel="stylesheet" href="css/reset.css"> -->
+ <!--   <link rel="stylesheet" href="css/style.css"> -->
+    <link rel="stylesheet" href="fonts/fonts.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.4/css/all.css">  
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-    <header>
-        <div class="back"><a href=""><i class="fas fa-long-arrow-alt-left"></i> Go back</a></div>
-        <div class="logo"><img src="img/logo.png" alt="" width="100" height="100"></div>
-        <div class="sign-in"><a href=""><i class="fas fa-user"></i> Sign in</a></div>
+    <header class="page-header">
+        <div class="logo">
+            <img src="img/logo_header.png" alt="">
+        </div>
+        <div class="btn-back">
+            <a href="#"><i class="fas fa-long-arrow-alt-left"></i>Go back</a>
+        </div>
+        <div class="btn-sign-in">
+            <a href=""><i class="fas fa-user"></i>Sign in</a>
+        </div>  
     </header>
+    
     <main>
-        <form action="" method="post">
+        <form action="#" method="post" class="form"> 
             <section class="order-header">
                 <div class="order-summary">
-                    <table>
-                        <caption>Your order</caption>
+                    <table class="order-summary-table">
+                        <caption><h3>Your order</h3></caption>
                         <tr>
                             <th>Items</th>
                             <th>Details</th>
@@ -31,15 +39,15 @@
                         <tr>
                             <td>2 documents</td>
                             <td>2 languages</td>
-                            <td value="USD:696.00">$ 696.06</td>
+                            <td>$ 696.06</td>
                             <td>48 hours*</td>
                         </tr>
                     </table>
                     <button type="submit">Place order</button>
-                    <button>Print a quote</button>
+                    <button type="button">Print a quote</button>
                 </div>
                 <div class="help">
-                    <h2>Help center</h2>
+                    <h3>Help center</h3>
                     <p>If you need assistance while placing your
                         order, contact one of our beloved Project
                         Manager by phone or email</p>
@@ -49,29 +57,42 @@
                     </address>
                 </div>
             </section>
-            <section class="order-main">
-                <fieldset class="document-type-selection">
-                    <legend>Select what you want to translate</legend>
-                    <ul>
-                        <li>
-                            <label for="website">Website</label>
-                            <input type="radio" id="website" name="document-type" value="website">
-                        </li>
-                        <li>
-                            <label for="document">Documents</label>
-                            <input type="radio" checked id="document" name="document-type" value="document">
-                        </li>
-                        <li>
-                            <label for="social-account">Social Account</label>
-                            <input type="radio" id="social-account" name="document-type" value="social-account">
-                        </li>
-                    </ul>
+            
+            <section class="order-main">       
+                <fieldset class="document-type-select">
+                    <legend><h2>Select what you want to translate</h2></legend>
+                    <label class="document-type-radio">
+                        <input type="radio" name="document-type" value="website" required>
+                        <span class="select-wrapper">
+                            <img src="img/website.png" alt="">
+                            <span>Website</span>
+                        </span>
+                    </label>
+                    <label class="document-type-radio">
+                        <input type="radio" name="document-type" value="document" required checked>
+                        <span class="select-wrapper">
+                            <img src="img/document.png" alt="">
+                            <span>Documents</span>
+                        </span>
+                    </label>
+                    <label class="document-type-radio">
+                        <input type="radio" name="document-type" value="social" required>
+                        <span class="select-wrapper">
+                            <img src="img/social.png" alt="">
+                            <span>Social Account</span>
+                        </span>
+                    </label>
                 </fieldset>
+                
                 <fieldset class="file-upload">
-                    <legend>Upload your documents <span>(Doc, Docx, Text, PFD, Markdown)</span></legend>
-                    <label for="file">Upload a new file</label>
-                    <input type="file" name="file" id="file" accept=".doc, .docx, .txt, .pdf, .md" multiple>
-                    <table>
+                    <legend><h2>Upload your documents <small>(Doc, Docx, Text, PFD, Markdown)</small></h2></legend>
+                    <label class="file-upload-btn">
+                        <input type="file" name="file" accept=".doc, .docx, .txt, .pdf, .md" multiple required hidden>
+                        <span class="select-wrapper">
+                            <span>Upload a new file</span>
+                        </span>
+                    </label>
+                    <table class="file-upload-table">
                         <tr>
                             <th>File name</th>
                             <th>File size</th>
@@ -92,121 +113,131 @@
                         </tr>
                     </table>
                 </fieldset>
-                <fieldset class="language-selection">
-                    <legend>Choose your languages pairings</legend>
-                    <div class="src-language">
+                
+                <fieldset class="language-select">
+                    <legend><h2>Choose your languages pairings</h2></legend>
+                    <div class="src-language-select">
                         <label for="src-language">From</label>
                         <select id="src-language" name="src-language">
-                            <option>Arabic</option>
-                            <option>Chinese</option>
-                            <option selected>English</option>
-                            <option>French</option>
-                            <option>German</option>
-                            <option>Kurdish</option>
-                            <option>Russian</option>
-                            <option>Ukrainian</option>
+                            <option value="arabic">Arabic</option>
+                            <option value="english" selected>English</option>
+                            <option value="kurdish">Kurdish</option>
+                            <option value="ukrainian">Ukrainian</option>
                         </select>
                     </div>
-                    <div class="res-language">
+                    <div class="res-language-select">
                         <label for="res-language-1">To</label>
-                        <select id="res-language-1" name="res-language">
-                            <option selected>Arabic</option>
-                            <option>Chinese</option>
-                            <option>English</option>
-                            <option>French</option>
-                            <option>German</option>
-                            <option>Kurdish</option>
-                            <option>Russian</option>
-                            <option>Ukrainian</option>
+                        <select id="res-language-1" name="res-language-1">
+                            <option value="arabic" selected>Arabic</option>
+                            <option value="english">English</option>
+                            <option value="kurdish">Kurdish</option>
+                            <option value="ukrainian">Ukrainian</option>
                         </select>
-                        <select id="res-language-2" name="res-language">
-                            <option>Arabic</option>
-                            <option>Chinese</option>
-                            <option>English</option>
-                            <option>French</option>
-                            <option>German</option>
-                            <option selected>Kurdish</option>
-                            <option>Russian</option>
-                            <option>Ukrainian</option>
+                        <select id="res-language-2" name="res-language-2">
+                            <option value="arabic">Arabic</option>
+                            <option value="english">English</option>
+                            <option value="kurdish" selected>Kurdish</option>
+                            <option value="ukrainian">Ukrainian</option>
                         </select>
-                        <button>Add</button>
+                        <button type="button">Add</button>
                     </div>
                 </fieldset>
-                <fieldset class="tone-selection">
-                    <legend>Select your desired tone</legend>
-                    <ul>
-                        <li>
-                            <label for="tone-1">Friendly / Casual</label>
-                            <input type="radio" id="tone-1" name="tone" value="casual">
-                        </li>
-                        <li>
-                            <label for="tone-2">Corporate / Pro</label>
-                            <input type="radio" checked id="tone-2" name="tone" value="pro">
-                        </li>
-                        <li>
-                            <label for="tone-3">Media / Formal</label>
-                            <input type="radio" id="tone-3" name="tone" value="formal">
-                        </li>
-                    </ul>
+                
+                <fieldset class="tone-select">
+                    <legend><h2>Select your desired tone</h2></legend>
+                    <label class="tone-radio">
+                        <input type="radio" name="tone" value="casual" required>
+                        <span class="select-wrapper">
+                            <span>Friendly / Casual</span>
+                        </span>
+                    </label>
+                    <label class="tone-radio">
+                        <input type="radio" name="tone" value="pro" required checked>
+                        <span class="select-wrapper">
+                            <span>Corporate / Pro</span>
+                        </span>
+                    </label>
+                    <label class="tone-radio">
+                        <input type="radio" name="tone" value="formal" required>
+                        <span class="select-wrapper">
+                            <span>Media / Formal</span>
+                        </span>
+                    </label>
                 </fieldset>
-                <fieldset class="time-selection">
-                    <legend>Tell us how urgent this job is</legend>
+                
+                <fieldset class="time-select">
+                    <legend><h2>Tell us how urgent this job is</h2></legend>
                     <input type="range" min="0" max="2" step="1" value="1">
                     <ul class="range-labels">
                         <li>I got time</li>
                         <li class="active selected">Average</li>
                         <li>Yesterday</li>
                     </ul>
+                    <div class="timeline-info">
+                        <h3>Timeline info</h3>
+                        <p>With an <strong>average</strong> timeline set up, our expert translator can take a
+                            reasonable amount of time perfecting your translation</p>
+                    </div>
                 </fieldset>
-                <fieldset class="payment-method-selection">
-                    <legend>Sign up and choose a payment method</legend>
-                    <p>Already have an account with us? <a href="">Sign in</a>.</p>
+                
+                <fieldset class="payment-select">
+                    <legend><h2>Sign up and choose a payment method</h2></legend>
+                    <p>Already have an account with us? <a href="#">Sign in</a>.</p>
                     <label for="name">Full name</label>
-                    <input type="text" id="name" name="name" value="Mathieu Mayer">
+                    <input type="text" id="name" name="name" value="Mathieu Mayer" required>
                     <label for="email">Email adress</label>
-                    <input type="email" id="email" name="email" value="mathieu.mm@me.com">
+                    <input type="email" id="email" name="email" value="mathieu.mm@me.com" required>
                     <label for="pwd">Choose a password</label>
-                    <input type="password" id="pwd" name="pwd" value="123456789">
-                    <ul>
-                        <li>
-                            <label for="payment-method-1">Visa / MasterCard</label>
-                            <input type="radio" checked id="payment-method-1" name="payment-method" value="credit-card">
-                        </li>
-                        <li>
-                            <label for="payment-method-2">PayPal</label>
-                            <input type="radio" id="payment-method-2" name="payment-method" value="paypal">
-                        </li>
-                        <li>
-                            <label for="payment-method-3">amazon.com</label>
-                            <input type="radio" id="payment-method-3" name="payment-method" value="amazon">
-                        </li>
-                    </ul>
+                    <input type="password" id="pwd" name="pwd" minlength="8" value="123456789" required>
+                    <fieldset class="payment-radio-wrapper">
+                        <label class="payment-method-radio">
+                            <input type="radio" name="payment-method" value="credit-card" required checked>
+                            <span class="select-wrapper">
+                                <img src="img/credit_card.png" alt="Visa / MasterCard">
+                            </span>
+                        </label>
+                        <label class="payment-method-radio">
+                            <input type="radio" name="payment-method" value="paypal" required>
+                            <span class="select-wrapper">
+                                <img src="img/paypal.png" alt="PayPal">
+                            </span>
+                        </label>
+                        <label class="payment-method-radio">
+                            <input type="radio" name="payment-method" value="amazon" required>
+                            <span class="select-wrapper">
+                                <img src="img/amazon.png" alt="amazon.com">
+                            </span>
+                        </label>
+                    </fieldset>
                     <label for="card-number">Card number</label>
-                    <input type="password" id="card-number" name="card-number">
+                    <input type="password" id="card-number" name="card-number" minlength="16" maxlength="16" required>
                     <label for="card-expiry-date">Expiry date</label>
-                    <input type="date" id="card-expiry-date" name="card-expiry-date">
+                    <input type="text" id="card-expiry-date" name="card-expiry-date" placeholder="DD/MM/YY"
+                        minlength="8" maxlength="8" required>
                     <label for="verification">Code</label>
-                    <input type="password" id="verification" name="verification-code">
+                    <input type="password" id="verification" name="verification-code" minlength="3" maxlength="3" required>
                 </fieldset>
             </section>
+           
             <section class="order-footer">
-                <label for="agreement-terms">I agree to the <a href="">Terms & Conditions</a></label>
-                <input type="checkbox" checked id="agreement-terms" name="agreement-terms-check" value="true">
+                <input type="checkbox" id="agreement-terms" name="agreement-terms" value="true" checked>
+                <label for="agreement-terms">I agree to the <a href="#">Terms & Conditions</a></label>
                 <button type="submit">Place order</button>
-                <button>Print a quote</button>
+                <button type="button">Print a quote</button>
             </section>
         </form>
     </main>
+   
     <footer>
         <div class="about">
-            <h2>What we do</h2>
+            <h3>What we do</h3>
             <p><i>We provide full range of language
                 services including content development,
                 document, website and social media
                 accounts translations.</i></p>
         </div>
         <div class="main-office-address">
-            <h2>Our main office</h2>
+            <h3>Our main office</h3>
             <address>
                 <p>Dubai, UAE<br>
                 P.O.Box: 502735<br>
@@ -215,12 +246,15 @@
             </address>
         </div>
         <div class="social">
-            <h2>Connect with us</h2>
+            <h3>Connect with us</h3>
             <ul>
                 <li>Facebook</li>
                 <li>Twitter</li>
                 <li>Linkedin</li>
             </ul>
+        </div>
+        <div class="logo">
+            <img src="img/logo_footer.png" alt="">
         </div>
     </footer>
 </body>
