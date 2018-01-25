@@ -171,6 +171,32 @@ input[type="range"]::after {
 }
 
 
+/* counters */
+
+.page-main {
+    counter-reset: section;
+}
+
+.counter h2 {
+    position: relative;
+}
+
+.counter h2::before {
+    counter-increment: section;
+    content: counter(section);
+    position: absolute;
+    left: -60px;
+    top: -10px;
+    display: flex;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #6e768f;
+    border-radius: 100%;
+}
+
+
 /* HEADER */
 
 .page-header {
@@ -402,7 +428,7 @@ input[type="range"]::after {
 
 .language-select {
     height: 300px;
-    padding: 0 10% 70px 10%;
+    padding: 0 10% 90px 10%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -451,7 +477,7 @@ input[type="range"]::after {
 
 .two-sections-container {
     height: 370px;
-    padding: 0 10% 50px 10%;
+    padding: 0 10% 80px 10%;
     display: flex;
 }
 
@@ -551,7 +577,7 @@ input[type="range"]::after {
 
 .payment-select {
     height: 750px;
-    padding: 0 10% 40px 10%;
+    padding: 0 10% 50px 10%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
