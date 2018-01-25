@@ -624,6 +624,12 @@ input[type="range"]::after {
 
 .payment-select input[name="card-expiry-date"] {
     width: 180px;
+    padding: 0;
+    text-align: center;
+}
+
+.payment-select input[name="card-expiry-date"]::-webkit-input-placeholder {
+    color: #d7d9e0;
 }
 
 .payment-select input[name="verification-code"] {
@@ -656,3 +662,81 @@ input[type="range"]::after {
 }
 
 
+/* FOOTER */
+
+.page-footer {
+    width: 100%;
+    margin-top: 130px;
+    background-color: #444a62;
+    display: flex;
+    justify-content: center;
+}
+
+.page-footer .footer-wrapper {
+    width: 80%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 90px 0;
+    color: #b3b9d7;
+}
+
+.page-footer h3 {
+    color: #c3ccea;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.page-footer h3 i {
+    font-size: 20px;
+    position: absolute;
+    left: -35px;
+    top: -3px;
+}
+
+.page-footer a {
+    color: #b3b9d7;
+}
+
+.page-footer .about {
+    width: 24%;
+    padding-left: 40px;
+}
+
+.page-footer .about p {
+    line-height: 1.5;
+    font-style: italic;
+}
+
+.page-footer .main-office-address {
+    width: 24%;
+    padding-left: 40px;
+}
+
+.page-footer .main-office-address address {
+    line-height: 1.8;
+    font-style: normal;
+}
+
+.page-footer .social {
+    width: 24%;
+    padding-left: 40px;
+}
+
+.page-footer .social ul {
+    list-style: none;
+    line-height: 1.8;
+}
+
+.page-footer .social ul i {
+    padding-right: 20px;
+}
+
+.page-footer .logo {
+    width: auto;
+}
